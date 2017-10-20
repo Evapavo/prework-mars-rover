@@ -9,6 +9,7 @@ var rover = {
 function turnLeft(rover){
   console.log("turnLeft was called!");
 
+
   switch (rover.direction) {
     case "N":
     console.log("Rover gira al Oeste");
@@ -51,7 +52,7 @@ function turnRight(rover){
     console.log("Rover gira al Este");
 
 
-
+}
   //Uso un switch y compara el valor de rover.direction y según
   //su valor cambia la direccion. Si en N --> E --> S --> O --> N
 }
@@ -59,27 +60,31 @@ function turnRight(rover){
 function moveForward(rover){
   console.log("moveForward was called");
 
-  switch (rover.direction) {
+switch (rover.direction) {
     case "N":
-    console.log( "la nueva posición es", rover.x-1);
+    console.log( "la nueva posición es", rover.x+=1);
     break;
     case "O":
-    console.log("La nueva posicion es", rover.y-1);
+    console.log("La nueva posicion es", rover.y-=1);
     break;
     case "S":
-    console.log("La nueva posición es", rover.x+1);
+    console.log("La nueva posición es", rover.x+=1);
     break;
     case "E":
-    console.log("La nueva posicion es", rover.y-1);
+    console.log("La nueva posicion es", rover.y-=1);
     break;
     default:
-    console.log("Rover gira al Oeste");
+    console.log("La mueva posición es", rover.x);
   // Comprobar la direccion que tiene el rover (rover.direction)
   // Segun la direccion debera avanzar o retroceder en x o y
   // Si avanza el valor de rover.x / y aumenta en 1 unidad.
   // Si retrocede el varlo de rover.x / y aumenta en 1 unidad.
   // rover.x = rover.x + 1;
   console.log("La nueva posicion es: ", rover.x);
+
+
+
+}
 }
 
 // Primero hacer los Switch que cambian la direccion del rover segun hacia donde
